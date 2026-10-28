@@ -51,32 +51,42 @@ function App() {
   }
 
   return (
+    // <>
+    //   <Navbar
+    //     {...datos}
+    //     idioma={idioma}
+    //     cambiarIdioma={setIdioma}
+    //     activo={activo}
+    //     onBuscar={buscar}
+    //     texto={textoGrande}
+    //     alternarTexto={() => setTextoGrande((valor) => !valor)}
+    //   />
+    //   <main className="contenedor demo-contenido"></main>
+    //   <p>{ingles ? "English content" : "Contenido en español"}</p>
+    //   <h1>{titulo ?? (ingles ? "Navigation" : "Navegación")}</h1>
+    //   <p role="status">
+    //     {consulta
+    //       ? `${ingles ? "Search submitted" : "Búsqueda envidada"}: ${consulta}`
+    //       : ingles
+    //         ? "Select a link"
+    //         : "Selecciona un enlace"}
+    //   </p>
+    //   <p>
+    //     {" "}
+    //     {ingles
+    //       ? "This example loads navigation abels from the API"
+    //       : "Este ejemplo carga los textos del menú desde la API"}
+    //   </p>
+    // </>
     <>
-      <Navbar
-        {...datos}
-        idioma={idioma}
-        cambiarIdioma={setIdioma}
-        activo={activo}
-        onBuscar={buscar}
-        texto={textoGrande}
-        alternarTexto={() => setTextoGrande((valor) => !valor)}
-      />
-      <main className="contenedor demo-contenido"></main>
-      <p>{ingles ? "English content" : "Contenido en español"}</p>
-      <h1>{titulo ?? (ingles ? "Navigation" : "Navegación")}</h1>
-      <p role="status">
-        {consulta
-          ? `${ingles ? "Search submitted" : "Búsqueda envidada"}: ${consulta}`
-          : ingles
-            ? "Select a link"
-            : "Selecciona un enlace"}
-      </p>
-      <p>
-        {" "}
-        {ingles
-          ? "This example loads navigation abels from the API"
-          : "Este ejemplo carga los textos del menú desde la API"}
-      </p>
+       <main className="pagina">
+        <header className="pagina-encabezado">
+          <h1>Taquilla</h1>
+          <p>Crea tu cuenta o ingresapara comprar tus boletos</p>
+        </header>
+        <div className="pagina-formularios"></div>
+       </main>
+       
     </>
   );
 }
