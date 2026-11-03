@@ -21,7 +21,8 @@ export default function Navbar({
   onBuscar,
   textoGrande,
   alternarTexto,
-}) {
+})
+{
   const [abierto, setAbierto] = useState(false);
   const [busqueda, setBusqueda] = useState("");
   const botonMenu = useRef(null);
@@ -36,8 +37,10 @@ export default function Navbar({
     ([clave]) => DESTINOS[clave],
   );
 
-  useEffect(() => {
-    function cerrarConEscape(evento) {
+  useEffect(() =>
+  {
+    function cerrarConEscape(evento)
+    {
       if (evento.key === "Escape" && abierto) {
         setAbierto(false);
         botonMenu.current?.focus();
@@ -47,12 +50,14 @@ export default function Navbar({
     return () => document.removeEventListener("keydown", cerrarConEscape);
   }, [abierto]);
 
-  function abrirBusqueda() {
+  function abrirBusqueda()
+  {
     setAbierto(true);
     requestAnimationFrame(() => campoBusqueda.current?.focus());
   }
 
-  function buscar(evento) {
+  function buscar(evento)
+  {
     evento.preventDefault();
     const consulta = busqueda.trim();
     if (!consulta) return;
