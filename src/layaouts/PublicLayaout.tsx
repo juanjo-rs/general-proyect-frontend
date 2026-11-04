@@ -7,7 +7,6 @@ export const PublicLayaout = ({
   usuario,
   cerrarSesion,
   iniciarSesion,
-  cambiarContraseña,
 }: Sesion) => {
   return (
     <div className="public-layout">
@@ -24,7 +23,6 @@ export const PublicLayaout = ({
               usuario,
               cerrarSesion,
               iniciarSesion,
-              cambiarContraseña,
             } satisfies Sesion
           }
         />
