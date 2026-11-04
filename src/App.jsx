@@ -1,6 +1,5 @@
 import { useTextos } from "./hooks/useTextos.js";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar.tsx";
 import { useEffect, useState } from "react";
 
 function leerSeccion() {
