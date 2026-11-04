@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const inicio = () => {
+export const Inicio = () => {
   return (
     <section>
         <h1>Aprendemos a construir interfaces</h1>
