@@ -12,15 +12,16 @@ export default function Navbar({
         <strong>Taquilla</strong>
         <NavLink to="/">Inicio</NavLink>
         <NavLink to="/about">Acerca de</NavLink>
-        {usuario?
-      <>
-        (<span>Hola, {usuario.nombre}</span>)
-        <button type="button" onClick={cerrarSesion}>
-          Cerrar sesion
-        </button>
-      </>
-      :<NavLink to="/sign-in">Iniciar sesion</NavLink>
-    }
+        {usuario ? (
+          <>
+            <span>Hola, {usuario.nombre}</span>
+            <button type="button" onClick={cerrarSesion}>
+              Cerrar sesion
+            </button>
+          </>
+        ) : (
+          <NavLink to="/sign-in">Iniciar sesion</NavLink>
+        )}
       </nav>
     </header>
   );
